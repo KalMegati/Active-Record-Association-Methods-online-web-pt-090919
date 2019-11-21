@@ -8,7 +8,8 @@ class Song < ActiveRecord::Base
 
   def drake_made_this
     if Artist.all.map{|musician| musician.name}.include?("Drake")
-      Artist.new(name: "Drake").save
+      drake = Artist.new(name: "Drake")
+      drake.save
     else
       
     end
