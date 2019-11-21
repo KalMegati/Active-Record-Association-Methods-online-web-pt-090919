@@ -7,6 +7,7 @@ class Song < ActiveRecord::Base
   end
 
   def drake_made_this
+    if Artist.all.map
     drake = Artist.new(name: "Drake")
     drake.save
     self.artist = drake
